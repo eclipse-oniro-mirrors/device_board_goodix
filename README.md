@@ -1,39 +1,126 @@
-# device_board_goodix
+# GR5515 Starter Kit
 
-#### 介绍
-{**以下是 Gitee 平台说明，您可以替换此简介**
-Gitee 是 OSCHINA 推出的基于 Git 的代码托管平台（同时支持 SVN）。专为开发者提供稳定、高效、安全的云端软件开发协作平台
-无论是个人、团队、或是企业，都能够用 Gitee 实现代码托管、项目管理、协作开发。企业项目请看 [https://gitee.com/enterprises](https://gitee.com/enterprises)}
+## 介绍
 
-#### 软件架构
-软件架构说明
+GR5515 Starter Kit（以下简称GR5515 SK）套件是基于GR551x芯片（支持Bluetooth 5.1）设计的开发平台，包含Starter Kit开发板（以下简称GR5515 SK板）、原理图和使用指南。用户可以在该平台上熟悉GR551x开发工具以及快速搭建自己的产品原型并验证相关功能。
 
+开发板外观如下图所示：
 
-#### 安装教程
+![开发板外观](https://docs.goodix.com/zh/docimg/gr5515_starter_kit_user_guide/190/gr5515_starter_kit_V1.7/zh//images/board.png)
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+开发板硬件布局如下图所示：
 
-#### 使用说明
+![开发板硬件布局上](https://docs.goodix.com/zh/docimg/gr5515_starter_kit_user_guide/190/gr5515_starter_kit_V1.7/zh//images/board_top.svg)
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+![开发板硬件布局下](https://docs.goodix.com/zh/docimg/gr5515_starter_kit_user_guide/190/gr5515_starter_kit_V1.7/zh//images/board_bot.svg)
 
-#### 参与贡献
+开发板功能框图如下图所示：
 
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
+![开发板硬件功能框图](https://docs.goodix.com/zh/docimg/gr5515_starter_kit_user_guide/190/gr5515_starter_kit_V1.7/zh//images/board_blo_dia.svg)
 
 
-#### 特技
+## 开发板功能
+*  支持Bluetooth 5.1的单模低功耗蓝牙SoC
+*  多功能按键和LED指示灯
+*  支持Arduino模块插接接口，IO电压可以通过level shift灵活配置
+*  支持调试功能的SEGGER J-Link OB
+*  UART转USB接口
+*  Micro USB接口连接PC
+*  1.44寸TFT彩色显示屏
+*  板上集成QSPI Flash
 
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  Gitee 官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解 Gitee 上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目
-5.  Gitee 官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+## 开发板规格
+
+| 器件类别	 |              开发板              |
+| ---------- | -------------------------------- |
+| CPU	      | ARM Cortex-M4 (64Mhz)            |
+| RAM	      | 256KB SRAM                       |
+| Flash	      | 1MB片内Flash + 8MB SPI Flash     |
+| GPIO	      | 45                               |
+| I2C	      | 2                                |
+| I2S	      | 2                                |
+| UART       | 2                                |
+| SPI	      | 2                                |
+| PWM	      | 6                                |
+| LED	      | 2                                |
+| Debug 	    | J-Link、CDC UART                 |
+| ADC	      | 5channel 13bit                   |
+| Display	    | 1.44寸TFT彩色                    |
+| 按键	      | up、down、left、right、ok、power |
+
+
+## 关键特性
+|     组件名	      |                                          能力介绍                                           |
+| --------------- | ------------------------------------------------------------------------------------------ |
+| BLE 服务	      | 提供蓝牙 BLE 功能。                                                                         |
+| 模组外设控制	    | 提供操作外设的能力。包括：I2C、I2S、ADC、UART、SPI、GPIO、PWM、FLASH等。                     |
+| 分布式软总线	    | 在OpenHarmony分布式网络中，提供设备被发现、数据传输的能力。                                   |
+| 设备安全绑定  	 | 提供在设备互联场景中，数据在设备之间的安全流转的能力。                                        |
+| 基础加解密	      | 提供密钥管理、加解密等能力。                                                                 |
+| 系统服务管理	    | 系统服务管理基于面向服务的架构，提供了OpenHarmony统一化的系统服务开发框架。                   |
+| 启动引导	      | 提供系统服务的启动入口标识。在系统服务管理启动时，调用boostrap标识的入口函数，并启动系统服务。 |
+| 基础库  	      | 提供公共基础库能力。包括：文件操作、KV存储管理等。                                            |
+| XTS	           | 提供OpenHarmony生态认证测试套件的集合能力。                                                  |
+| HDF	           | 提供OpenHarmony硬件配置驱动的能力。                                                         |
+| Kconfig	         | 提供内核配置能力。                                                                          |
+
+
+## 引脚定义
+
+参考datasheet: [GR5515RGBD BGA68引脚定义](https://docs.goodix.com/zh/online/detail/gr551x_datasheet_brief/V1.7/7a02161fefa917a1b63f3d5a8338e879)
+
+## 搭建开发环境
+
+### 系统要求
+
+系统要求基于Cortex-m4的liteos_m内核操作系统，采用arm-none-eabi-gcc 10.2.1版本toolchain,提供256KB内存和1MB flash系统配置。
+
+OpenHarmony基于Goodix GR5515RGBD芯片的GR5515 Starter Kit开发板，依赖liteos_m内核，内核依赖cortex-m4架构配置，编译依赖arm官方的arm-none-eabi-gcc 10.2.1版本。
+
+OpenHarmony需要按照[官方文档](https://gitee.com/openharmony-sig/devboard_device_goodix_gr551x/blob/master/README.md)介绍安装环境, 然后编译出烧录包，按照文档介绍烧录。
+
+### 工具要求
+ubuntu 18.04编译，windows10系统烧录。
+
+1.	Ubuntu18.04系统安装
+`sudo apt-get install build-essential gcc g++ make zlib* libffi-dev e2fsprogs pkg-config flex bison perl bc openssl libssl-dev libelf-dev libc6-dev-amd64 binutils binutils-dev libdwarf-dev u-boot-tools mtd-utils gcc-arm-linux-gnueabi`
+
+2.	Ubuntu18.04安装python3和pip3 
+`python3 -m pip install --user ohos-build`
+
+3.	Ubuntu18.04 配置arm-none-eabi-gcc 10.2.1
+
+下载网站：https://developer.arm.com/tools-and-software/open-source-software/developer-tools/gnu-toolchain/gnu-rm/downloads 
+
+选择：gcc-arm-none-eabi-10-2020-q4-major-x86_64-linux.tar.bz2
+下载解压到指定目录，然后通过bashrc配置环境变量。
+
+### 搭建过程
+
+参考 [环境搭建步骤](https://gitee.com/openharmony-sig/devboard_device_goodix_gr551x/blob/master/README.md)
+
+## 编译调试
+
+参考 [编译调试步骤](https://gitee.com/openharmony-sig/devboard_device_goodix_gr551x/blob/master/README.md)
+
+
+## 首个示例
+
+代码默认有两个示例：
+1. [BLE示例](https://gitee.com/openharmony-sig/devboard_vendor_goodix_gr5515_sk_basic/tree/master/gr5515_sk_iotlink_demo)
+2. [XTS测试示例](https://gitee.com/openharmony-sig/devboard_vendor_goodix_gr5515_sk_basic/tree/master/gr5515_sk_xts_demo)
+
+## 参考资源
+
+为了更好的使用GR5515 Starter Kit套件，建议参考下表相关资料。
+
+|            名称            |                                                                                       描述                                                                                        |
+| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| GR5515 Starter Kit用户指南 | 介绍GR5515 Starter Kit套件使用方法： [《GR5515 Starter Kit用户指南》]( https://docs.goodix.com/zh/online/detail/gr5515_starter_kit_user_guide/V1.7/42a03ba92cad1d63afd9baa8bb8c37df) |
+| GR551x开发者指南           | GR551x软硬件介绍、快速使用及资源总览： [《GR551x开发者指南》]( https://docs.goodix.com/zh/online/detail/gr551x_develop_guide/V2.3/27f7d503bcd7ad1d63fa5b316b3bde4f)                    |
+| J-Link用户指南             | J-Link使用说明：www.segger.com/downloads/jlink/UM08001_JLink.pdf                                                                                                                   |
+| GR5515-SK-BASIC-RevC      | GR5515 Starter Kit开发板原理图：[《GR5515-SK-BASIC-RevC.pdf》]( https://product.goodix.com/zh/docview/GR5515-SK-BASIC-RevC_Rev.1.5?objectId=100&objectType=document&version=133)   |
+
+## 联系
+https://www.goodix.com
+
