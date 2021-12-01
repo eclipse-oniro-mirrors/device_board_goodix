@@ -44,7 +44,7 @@ GR5515 Starter Kit（以下简称GR5515 SK）套件是基于GR551x芯片（支�
 | PWM	      | 6                                |
 | LED	      | 2                                |
 | Debug 	    | J-Link、CDC UART                 |
-| ADC	      | 5channel 13bit                   |
+| ADC	      | 5 channel 13bit                   |
 | Display	    | 1.44寸TFT彩色                    |
 | 按键	      | up、down、left、right、ok、power |
 
@@ -82,13 +82,30 @@ OpenHarmony需要按照[官方文档](https://gitee.com/openharmony-sig/devboard
 ### 工具要求
 ubuntu 18.04编译，windows10系统烧录。
 
-1.	Ubuntu18.04系统安装
+1.	Ubuntu18.04系统安装：
+
 `sudo apt-get install build-essential gcc g++ make zlib* libffi-dev e2fsprogs pkg-config flex bison perl bc openssl libssl-dev libelf-dev libc6-dev-amd64 binutils binutils-dev libdwarf-dev u-boot-tools mtd-utils gcc-arm-linux-gnueabi`
 
-2.	Ubuntu18.04安装python3和pip3 
+2.	Ubuntu18.04安装python3：
+
+```
+sudo apt-get install python3.8
+sudo update-alternatives --install /usr/bin/python python /usr/bin/python3.8 1
+sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.8
+```
+
+3.	Ubuntu18.04安装pip3：
+
+```
+sudo apt-get install python3-setuptools python3-pip -y
+sudo pip3 install --upgrade pip
+```
+
+4. Ubuntu18.04安装hb工具：
+
 `python3 -m pip install --user ohos-build`
 
-3.	Ubuntu18.04 配置arm-none-eabi-gcc 10.2.1
+5.	Ubuntu18.04 配置arm-none-eabi-gcc 10.2.1 ：
 
 下载网站：https://developer.arm.com/tools-and-software/open-source-software/developer-tools/gnu-toolchain/gnu-rm/downloads 
 
@@ -106,9 +123,8 @@ ubuntu 18.04编译，windows10系统烧录。
 
 ## 首个示例
 
-代码默认有两个示例：
-1. [BLE示例](https://gitee.com/openharmony-sig/devboard_vendor_goodix_gr5515_sk_basic/tree/master/gr5515_sk_iotlink_demo)
-2. [XTS测试示例](https://gitee.com/openharmony-sig/devboard_vendor_goodix_gr5515_sk_basic/tree/master/gr5515_sk_xts_demo)
+代码默认有1个示例：
+1. [XTS测试示例](https://gitee.com/openharmony-sig/devboard_vendor_goodix_gr5515_sk_basic/tree/master/gr5515_sk_xts_demo)
 
 ## 参考资源
 
