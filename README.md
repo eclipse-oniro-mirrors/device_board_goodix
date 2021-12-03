@@ -69,18 +69,53 @@ GR5515 Starter Kit（以下简称GR5515 SK）套件是基于GR551x芯片（支�
 
 参考datasheet: [GR5515RGBD BGA68引脚定义](https://docs.goodix.com/zh/online/detail/gr551x_datasheet_brief/V1.7/7a02161fefa917a1b63f3d5a8338e879)
 
+## 准备工作
+
+在使用GR5515 SK板前，建议完成以下准备工作。
+
+* 硬件准备
+
+|  名称  |           描述           |
+| ------ | ------------------------ |
+| 数据线 | Micro-USB 2.0数据线      |
+| 开发板 | GR5515 Starter Kit开发板 |
+
+
+* 软件准备
+
+|     名称     |                                       描述                                       |
+| ----------- | ------------------------------------------------------------------------------- |
+| 操作系统     | Windows 7操作系统及以上版本或者Ubuntu 18.04 LTS版本                        |
+| 串口助手     | 可打印串口日志的串口终端                                                          |
+| GProgrammer | 固件下载工具 [点击下载](https://product.goodix.com/zh/software_tool/gprogrammer) |
+
+* 供电和连接
+
+
+如下图所示是GR5515 Starter Kit开发板的装配图。
+
+![GR5515 Starter Kit开发板装配图](https://docs.goodix.com/zh/docimg/gr5515_starter_kit_user_guide/190/gr5515_starter_kit_V1.7/zh//images/board_assem.svg)
+
+在使用GR5515 SK板之前，需按以下步骤完成供电和连接设置：
+1. 使用Micro USB 2.0线连接GR5515 SK板和PC。Mirco USB用于供电以及通过J-Link进行编程。
+2. 将电源开关S6切换到右端，设置为SK板LDO供电；将S6切换到左端，设置为锂电池供电。
+3. 将电源开关S5切换到右端ON的位置，打开电源。
+4. D102开始闪烁表示PC开始检测J-Link接口。检测成功后，D102不再闪烁，变成常亮。
+5. D102常亮后，打开PC的设备管理器，检查设备管理器 > 端口（COM和LPT）列表中是否有JLINK。若出现，则供电和连接设置完成，可对GR551x进行编程下载；若未正确检测到JLINK设备，则需要检查是否正确安装了JLINK驱动，可以尝试重新安装最新版本的JLINK驱动。
+
+提示：
+1. 安装GProgrammer会自动安装JLINK驱动，如果PC未安装JLINK驱动，请先下载安装[GProgrammer](https://product.goodix.com/zh/software_tool/gprogrammer)。
+
+2. 开发板通过Mirco USB连接到PC后，会在设备管理器中"端口(COM和LPT)"列表中出现一个"JLink CDC UART Port(COMX)"串口号，串口助手需使用该串口号观察开机log信息。
+
 ## 搭建开发环境
 
 ### 系统要求
 
-系统要求基于Cortex-m4的liteos_m内核操作系统，采用arm-none-eabi-gcc 10.2.1版本toolchain,提供256KB内存和1MB flash系统配置。
-
-OpenHarmony基于Goodix GR5515RGBD芯片的GR5515 Starter Kit开发板，依赖liteos_m内核，内核依赖cortex-m4架构配置，编译依赖arm官方的arm-none-eabi-gcc 10.2.1版本。
-
-OpenHarmony需要按照[官方文档](https://gitee.com/openharmony-sig/devboard_device_goodix_gr551x/blob/master/README.md)介绍安装环境, 然后编译出烧录包，按照文档介绍烧录。
+1. Windows 7操作系统及以上版本，用于固件烧录;
+2. Ubuntu 18.04 LTS版本, 用于代码编译。
 
 ### 工具要求
-ubuntu 18.04编译，windows10系统烧录。
 
 1.	Ubuntu18.04系统安装：
 
@@ -116,6 +151,7 @@ sudo pip3 install --upgrade pip
 
 参考 [环境搭建步骤](https://gitee.com/openharmony-sig/devboard_device_goodix_gr551x/blob/master/README.md)
 
+
 ## 编译调试
 
 参考 [编译调试步骤](https://gitee.com/openharmony-sig/devboard_device_goodix_gr551x/blob/master/README.md)
@@ -138,5 +174,13 @@ sudo pip3 install --upgrade pip
 | GR5515-SK-BASIC-RevC      | GR5515 Starter Kit开发板原理图：[《GR5515-SK-BASIC-RevC.pdf》]( https://product.goodix.com/zh/docview/GR5515-SK-BASIC-RevC_Rev.1.5?objectId=100&objectType=document&version=133)   |
 
 ## 联系
-https://www.goodix.com
 
+如果您是商务合作，请联系: [https://www.goodix.com/zh/about_goodix/profile/contact_us/business_support](https://www.goodix.com/zh/about_goodix/profile/contact_us/business_support)
+
+
+如果您在开发过程中有问题，请在开发者社区提问：[https://developers.goodix.com/zh/bbs/list?orderType=answer](https://developers.goodix.com/zh/bbs/list?orderType=answer)
+
+
+如果您需要获取开发板，可以访问如下地址：[https://www.sekorm.com/product/756747.html](https://www.sekorm.com/product/756747.html)
+
+或者联系我司代理商获取：[https://www.goodix.com/zh/support/distributors](https://www.goodix.com/zh/support/distributors)
