@@ -44,7 +44,7 @@ board_cflags = [
   "-std=c99",
   "--inline",
   "-ggdb",
-  "-O0",
+  "-O1",
   "-ffunction-sections",
   "-fdata-sections",
   "-mfloat-abi=softfp",
