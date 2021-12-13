@@ -14,8 +14,3 @@
 config BOARD_GR5515_SK
     bool "select board GR5515_SK"
     depends on SOC_GR551x
-
-config LFS_MAX_BLOCK_COUNT
-    int "Number of Flash sectors allocated by Littlefs"
-    default 60
-    depends on SOC_GR551x
