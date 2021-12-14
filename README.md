@@ -176,12 +176,7 @@ sudo pip3 install --upgrade pip
 
 ## 联系
 
-如果您是商务合作，请联系: [https://www.goodix.com/zh/about_goodix/profile/contact_us/business_support](https://www.goodix.com/zh/about_goodix/profile/contact_us/business_support)
+如果您在开发过程中有问题，请在仓库issues提问，或[开发社区](https://developers.goodix.com/zh/bbs/list?orderType=answer)提问。
 
+[开发板获取](https://product.goodix.com/zh/kit/gr5515_starter_kit)
 
-如果您在开发过程中有问题，请在开发者社区提问：[https://developers.goodix.com/zh/bbs/list?orderType=answer](https://developers.goodix.com/zh/bbs/list?orderType=answer)
-
-
-如果您需要获取开发板，可以访问如下地址：[https://www.sekorm.com/product/756747.html](https://www.sekorm.com/product/756747.html)
-
-或者联系我司代理商获取：[https://www.goodix.com/zh/support/distributors](https://www.goodix.com/zh/support/distributors)
