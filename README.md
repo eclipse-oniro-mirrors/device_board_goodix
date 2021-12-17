@@ -177,6 +177,3 @@ sudo pip3 install --upgrade pip
 ## 联系
 
 如果您在开发过程中有问题，请在仓库issues提问，或[开发社区](https://developers.goodix.com/zh/bbs/list?orderType=answer)提问。
-
-[开发板获取](https://product.goodix.com/zh/kit/gr5515_starter_kit)
-
