@@ -12,8 +12,13 @@
 # limitations under the License.
 
 if (ohos_kernel_type == "liteos_m") {
-  import("//kernel/liteos_m/liteos.gni")
+  import("//drivers/adapter/khdf/liteos_m/hdf.gni")
   module_name = get_path_info(rebase_path("."), "name")
-  kernel_module(module_name) {
+  hdf_driver(module_name) {
+    hcs_sources = [ "gr5515_sk.hcs" ]
+    visibility += [
+      "$device_path",
+      ".",
+    ]
   }
 }
