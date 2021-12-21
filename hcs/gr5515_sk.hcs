@@ -12,6 +12,6 @@
 # limitations under the License.
 */
 
-#include "../../../soc/goodix/gr551x/hcs/device_info/device_info.hcs"
+#include "../../../soc/goodix/gr551x/hcs/hdf.hcs"
 
- 
+
