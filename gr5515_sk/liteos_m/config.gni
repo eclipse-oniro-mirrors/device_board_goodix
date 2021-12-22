@@ -57,7 +57,6 @@ board_cflags = [
   "-MD",
   "-fno-stack-protector",
   "-DLOSCFG_BASE_CORE_HILOG=1",
-  "-Dbool=BOOL",
 ]
 
 board_cxx_flags = []
