@@ -36,7 +36,7 @@ GR5515 Starter Kit（以下简称GR5515 SK）套件是基于GR551x芯片（支�
 | CPU	      | ARM Cortex-M4F (64Mhz)            |
 | RAM	      | 256KB SRAM                       |
 | Flash	      | 1MB片内Flash + 8MB SPI Flash     |
-| GPIO	      | 45                               |
+| GPIO	      | 39                               |
 | I2C	      | 2                                |
 | I2S	      | 2                                |
 | UART       | 2                                |
@@ -178,4 +178,4 @@ sudo pip3 install --upgrade pip
 
 如果您在开发过程中有问题，请在仓库issues提问，或[开发社区](https://developers.goodix.com/zh/bbs/list?orderType=answer)提问。
 
-[开发板更多信息获取](https://product.goodix.com/zh/kit/gr5515_starter_kit)
+[开发板信息获取](https://product.goodix.com/zh/kit/gr5515_starter_kit)
